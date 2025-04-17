@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #13c4d8;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #0a0b0b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 70px;
+            background-color: #f8f9fa;
+            color: var(--dark-color);
+        }
+        
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link {
+            color: var(--secondary-color) !important;
+            font-weight: 500;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        
+        /* Hero Section */
+        #home {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        /* Section umum */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        /* Project */
+        .project-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            margin-bottom: 30px;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .badge-tech {
+            background-color: var(--primary-color);
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        /* Contact */
+        #contact {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .form-control {
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #49067d;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-icon:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+    </style>
+
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+    <!-- Navigasi Fixed -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Welcome</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portofolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="text-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Hi, No Allias</h1>
+                    <p class="lead mb-4">Panggil aja Ardifa/Amar</p>
+                    <a href="#contact" class="btn btn-light btn-lg px-4 me-2">Hubungi Saya</a>
+                    <a href="#portfolio" class="btn btn-outline-light btn-lg px-4">Portofolio</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="WhatsApp Image 2025-04-14 at 21.23.43_998a9f78.jpg"alt="Profile" class="img-fluid rounded-circle profile-img mt-4 mt-lg-0">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="about">
+        <div class="container">
+            <h2 class="text-center section-title">Tentang Saya</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Siapa Saya?</h3>
+                    <p>Saya seorang mahasiswa semester 4 dari kampus Institut Teknologi Padang.Saya memiliki ketertarikan dibidang teknologi dan hobi berolahraga.Saya juga hobi mengoleksi sepatu basket dan juga Saya dulu bercita cita menjadi penembak jitu</p>
+                    <p>Saya memiliki beberapa prestasi di bidang olahraga yaitu di cabor basket dan voli dan beberapa keahlian dibidang Informatika</p>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="mb-4">Informasi Pribadi</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><strong>Nama:</strong> Muhammad Ardifa</li>
+                        <li class="mb-3"><strong>Email:</strong>  muhammadardifa123@gmail.com</li>
+                        <li class="mb-3"><strong>Telepon:</strong> +62 897 8501 668</li>
+                        <li class="mb-3"><strong>Alamat:</strong> Padang, Indonesia</li>
+                    </ul>
+                    <a href="https://wa.me/+628978501668?text=HALO" class="btn btn-primary mt-3">Lebih lanjut</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portofolio -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="text-center section-title">Proyek Terbaru</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" class="card-img-top project-img" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Aplikasi E-Commerce</h5>
+                            <p class="card-text">Platform e-commerce lengkap dengan sistem pembayaran, manajemen produk, dan dashboard admin.</p>
+                            <a href="aplikasi e commerce.html" class="btn btn-primary">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" class="card-img-top project-img" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Sistem Manajemen Konten</h5>
+                            <p class="card-text">CMS custom untuk kebutuhan klien dengan fitur multi-user, workflow approval, dan versi konten.</p>
+                            <a href="sistem manajemen konten.html" class="btn btn-primary">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" class="card-img-top project-img" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Aplikasi Mobile</h5>
+                            <p class="card-text">Aplikasi mobile untuk layanan kesehatan dengan fitur appointment dokter dan telemedicine.</p>
+                            <a href="aplikasi mobile.html" class="btn btn-primary">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="text-center section-title text-white">Hubungi Saya</h2>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="mb-4">
+                        <h4 class="mb-4">Informasi Kontak</h4>
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="fas fa-map-marker-alt contact-icon mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Lokasi</h5>
+                                <p>Padang, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="fas fa-envelope contact-icon mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Email</h5>
+                                <p>muhammadardifa123@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-3">
+                            <i class="fas fa-phone-alt contact-icon mt-1"></i>
+                            <div>
+                                <h5 class="mb-1">Telepon</h5>
+                                <p>+62 897 8501 668</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Nama Anda" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Email Anda" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subjek">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <div class="container">
+            <div class="mb-4">
+                <a href="https://www.facebook.com/share/168MxzPLY5/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.tiktok.com/@_diablo42?_t=ZS-8vc1VQu7yBc&_r=1" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/maardifaa?igsh=MmRmemN6ZjIwaTZn" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/mardifa47" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://youtube.com/@dasik67?si=3hm2Fcv7u1t-EQqb" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="https://discordapp.com/users/1258346130450812929" class="social-icon"><i class="fab fa-discord"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2025 Portofolio Muhammad Ardifa. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
